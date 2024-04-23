@@ -1,13 +1,29 @@
 import Link from 'next/link';
 
-const LoginForm = () => {
+const RegisterForm = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-white">
       <div className="w-full max-w-md px-6 py-12 lg:px-8">
         <form className="space-y-6 -mt-20">
           <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-light-text">
-            Login
+            Create an account
           </h2>
+
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium leading-6 text-light-text">
+              Name
+            </label>
+            <div className="mt-2">
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                required
+                className="block w-full rounded-md border-0 py-1.5 text-light-text shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
 
           <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-light-text">
@@ -56,9 +72,9 @@ const LoginForm = () => {
           </div>
 
           <p className="text-center text-sm text-light-text">
-            Don&apos;t have an account yet?{' '}
-            <Link href="/auth/register" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Register now
+            Already have an account?{' '}
+            <Link href="/auth/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              Sign in
             </Link>
           </p>
         </form>
@@ -67,4 +83,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

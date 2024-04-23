@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Project Management App',
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <Head>
@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <title>{metadata.title as React.ReactNode}</title>
       </Head>
-      <body className="text-blue-900 bg-white">
+      <body>
         <main>{children}</main>
       </body>
     </html>
